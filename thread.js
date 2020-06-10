@@ -7,6 +7,7 @@ class Thread {
     this.maxAngle = maxAngle;
     this.threads = threads;
     this.probBranch = 0.1;
+    this.colorRandomness = 20;
   }
   
   grow() {
@@ -39,6 +40,6 @@ class Thread {
     const c = this.center.copy()
     c.sub(this.pos);
     const a = c.heading();
-    return map(a, -PI, PI, 0, 360) + random(-5, 5); // we add a bit of randomness to prevent color banding
+    return map(a, -PI, PI, 0, 360) + random(-this.colorRandomness, this.colorRandomness); // we add a bit of randomness to prevent color banding
   }
 }
