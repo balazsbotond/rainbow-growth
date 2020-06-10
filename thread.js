@@ -37,7 +37,7 @@ class Thread {
   }
 
   getColor() {
-    const c = this.center.copy()
+    const c = this.center.copy();
     c.sub(this.pos);
     const a = c.heading();
 
