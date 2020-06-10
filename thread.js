@@ -40,6 +40,8 @@ class Thread {
     const c = this.center.copy()
     c.sub(this.pos);
     const a = c.heading();
-    return map(a, -PI, PI, 0, 360) + random(-this.colorRandomness, this.colorRandomness); // we add a bit of randomness to prevent color banding
+
+    // we add a bit of randomness to prevent color banding
+    return map(a, -PI, PI, 0, 360) + random(-this.colorRandomness, this.colorRandomness);
   }
 }
